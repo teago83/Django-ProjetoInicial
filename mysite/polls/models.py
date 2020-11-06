@@ -6,6 +6,8 @@ from django.utils import timezone
 # Create your models here.
 
 class Question (models.Model):
+    DoesNotExist = models.Manager()
+    objects = models.Manager()
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
 
